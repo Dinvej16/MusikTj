@@ -1,17 +1,17 @@
-C:\Java21\Grundläggande programmering\MusikTj\src\main\java\com\grupparbete\musikapp\controller\UserController.java
-C:\Java21\Grundläggande programmering\MusikTj\src\main\java\com\grupparbete\musikapp\MusikAppApplication.java
-C:\Java21\Grundläggande programmering\MusikTj\src\main\java\com\grupparbete\musikapp\service\PlaylistService.java
-C:\Java21\Grundläggande programmering\MusikTj\src\main\java\com\grupparbete\musikapp\controller\SongController.java
-C:\Java21\Grundläggande programmering\MusikTj\src\main\java\com\grupparbete\musikapp\model\Playlist.java
-C:\Java21\Grundläggande programmering\MusikTj\src\main\java\com\grupparbete\musikapp\model\User.java
-C:\Java21\Grundläggande programmering\MusikTj\src\main\java\com\grupparbete\musikapp\model\Song.java
-C:\Java21\Grundläggande programmering\MusikTj\src\main\java\com\grupparbete\musikapp\controller\ExternApiController.java
-C:\Java21\Grundläggande programmering\MusikTj\src\main\java\com\grupparbete\musikapp\controller\PlaylistController.java
-C:\Java21\Grundläggande programmering\MusikTj\src\main\java\com\grupparbete\musikapp\repository\UserRepository.java
-C:\Java21\Grundläggande programmering\MusikTj\src\main\java\com\grupparbete\musikapp\service\SongService.java
-C:\Java21\Grundläggande programmering\MusikTj\src\main\java\com\grupparbete\musikapp\model\ExternApi.java
-C:\Java21\Grundläggande programmering\MusikTj\src\main\java\com\grupparbete\musikapp\service\UserService.java
-C:\Java21\Grundläggande programmering\MusikTj\src\main\java\com\grupparbete\musikapp\service\ExternApiService.java
-C:\Java21\Grundläggande programmering\MusikTj\src\main\java\com\grupparbete\musikapp\repository\PlaylistRepository.java
-C:\Java21\Grundläggande programmering\MusikTj\src\main\java\com\grupparbete\musikapp\repository\ExternApiRepository.java
-C:\Java21\Grundläggande programmering\MusikTj\src\main\java\com\grupparbete\musikapp\repository\SongRepository.java
+/Users/dinovejzovic/Documents/GitHub/MusikTj/src/main/java/com/grupparbete/musikapp/service/ExternApiService.java
+/Users/dinovejzovic/Documents/GitHub/MusikTj/src/main/java/com/grupparbete/musikapp/model/User.java
+/Users/dinovejzovic/Documents/GitHub/MusikTj/src/main/java/com/grupparbete/musikapp/controller/UserController.java
+/Users/dinovejzovic/Documents/GitHub/MusikTj/src/main/java/com/grupparbete/musikapp/controller/SongController.java
+/Users/dinovejzovic/Documents/GitHub/MusikTj/src/main/java/com/grupparbete/musikapp/MusikAppApplication.java
+/Users/dinovejzovic/Documents/GitHub/MusikTj/src/main/java/com/grupparbete/musikapp/repository/ExternApiRepository.java
+/Users/dinovejzovic/Documents/GitHub/MusikTj/src/main/java/com/grupparbete/musikapp/service/UserService.java
+/Users/dinovejzovic/Documents/GitHub/MusikTj/src/main/java/com/grupparbete/musikapp/repository/SongRepository.java
+/Users/dinovejzovic/Documents/GitHub/MusikTj/src/main/java/com/grupparbete/musikapp/controller/ExternApiController.java
+/Users/dinovejzovic/Documents/GitHub/MusikTj/src/main/java/com/grupparbete/musikapp/model/Song.java
+/Users/dinovejzovic/Documents/GitHub/MusikTj/src/main/java/com/grupparbete/musikapp/model/ExternApi.java
+/Users/dinovejzovic/Documents/GitHub/MusikTj/src/main/java/com/grupparbete/musikapp/controller/PlaylistController.java
+/Users/dinovejzovic/Documents/GitHub/MusikTj/src/main/java/com/grupparbete/musikapp/service/SongService.java
+/Users/dinovejzovic/Documents/GitHub/MusikTj/src/main/java/com/grupparbete/musikapp/repository/PlaylistRepository.java
+/Users/dinovejzovic/Documents/GitHub/MusikTj/src/main/java/com/grupparbete/musikapp/repository/UserRepository.java
+/Users/dinovejzovic/Documents/GitHub/MusikTj/src/main/java/com/grupparbete/musikapp/model/Playlist.java
+/Users/dinovejzovic/Documents/GitHub/MusikTj/src/main/java/com/grupparbete/musikapp/service/PlaylistService.java
