@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class RequestHandler {
     @GetMapping()
     public static JSONObject externalControllerHandler(){
-        return ExternalApiCall.fetchUserData();
+        return ExternalApiCall.searchSong();
     }
 }
