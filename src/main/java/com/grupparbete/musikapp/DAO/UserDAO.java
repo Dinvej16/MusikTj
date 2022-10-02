@@ -1,9 +1,7 @@
-package com.grupparbete.musikapp.dao;
+package com.grupparbete.musikapp.DAO;
 
 import com.grupparbete.musikapp.model.User;
 import com.grupparbete.musikapp.repository.UserRepository;
-
-import java.util.Optional;
 
 public class UserDAO {
 
