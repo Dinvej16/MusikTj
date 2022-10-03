@@ -4,7 +4,9 @@ package com.grupparbete.musikapp.model;
 import javax.persistence.*;
 
 @Entity
-@Table(    name = "users",         uniqueConstraints = {@UniqueConstraint(columnNames = "username"),
+@Table
+        (    name = "users",
+        uniqueConstraints = {@UniqueConstraint(columnNames = "username"),
         @UniqueConstraint(columnNames = "password") })
 public class User {
 

@@ -2,13 +2,14 @@ package com.grupparbete.musikapp.DAO;
 
 import com.grupparbete.musikapp.model.User;
 import com.grupparbete.musikapp.repository.UserRepository;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class UserDAO {
 
     UserRepository userRepository;
 
-
-    public User findCurrentUserById(Long id){
+    public User findUserById(Long id){
         return userRepository.findUserById(id);
 
     }
