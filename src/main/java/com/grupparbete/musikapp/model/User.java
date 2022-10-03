@@ -3,18 +3,25 @@ package com.grupparbete.musikapp.model;
 
 import javax.persistence.*;
 
+
 @Entity
-@Table
-        (    name = "users",
-        uniqueConstraints = {@UniqueConstraint(columnNames = "username"),
-        @UniqueConstraint(columnNames = "password") })
+@Table(name = "users")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+
+
+
+    @Column(name="username")
     private String username;
+
+    @Column(name="password")
     private String password;
+
+    @Column(name="id")
+    private Long id;
+
 
 
     public User(Long id, String username, String password) {
@@ -27,6 +34,7 @@ public class User {
     public User() {
 
     }
+
 
     public Long getId() {
 
