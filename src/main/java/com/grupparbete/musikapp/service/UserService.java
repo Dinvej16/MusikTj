@@ -17,6 +17,7 @@ public class UserService {
     public User getUserById(Long id) {
         return userDAO.findUserById (id);
     }
+    // fortsätt här och sedan dao postgres
 
 
     }
