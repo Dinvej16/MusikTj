@@ -1,4 +1,7 @@
 package com.grupparbete.musikapp.repository;
 
-public interface SongRepository {
+import com.grupparbete.musikapp.model.Song;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface SongRepository extends JpaRepository<Song, Long> {
 }
