@@ -5,7 +5,7 @@ import com.grupparbete.musikapp.model.User;
 import com.grupparbete.musikapp.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
-import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
+
 @Service
 public class UserService {
 
