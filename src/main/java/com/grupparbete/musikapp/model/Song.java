@@ -14,11 +14,11 @@ public class Song {
       String artist;
       String streams; // Sångens speltid
 
-      public Song(String name, String artist, String streams) {
+      public Song(String name, String artist) {
             this.id = id;
             this.name = name;
             this.artist = artist;
-            this.streams = streams;
+
       }
 
       public Song() {

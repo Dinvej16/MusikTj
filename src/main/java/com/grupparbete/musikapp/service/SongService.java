@@ -21,9 +21,8 @@ public class SongService {
         for (JsonNode i : node.get("results").get("trackmatches").get("track")) {
             String trackName = i.get("name").asText();
             String artist = i.get("artist").asText();
-            String streams = i.get("listeners").asText();
 
-            song = new Song(trackName, artist, streams);
+            song = new Song(trackName, artist);
             songRepository.save(song);
         }
         return song;

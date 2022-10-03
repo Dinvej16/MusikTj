@@ -21,10 +21,10 @@ static ArrayList<Song> songs = new ArrayList<Song>();
         try {
             Song song = null;
             for (JsonNode i : node.get("results").get("trackmatches").get("track")) {
+
                 String trackName = i.get("name").asText();
                 String artist = i.get("artist").asText();
-                String streams = i.get("listeners").asText();
-                song = new Song(trackName, artist, streams);
+                song = new Song(trackName, artist);
                 songs.add(song);
             }
             return songs;
