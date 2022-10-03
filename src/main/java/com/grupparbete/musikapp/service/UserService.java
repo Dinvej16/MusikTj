@@ -14,10 +14,11 @@ public class UserService {
         this.userDAO = userDAO;
     }
 
-    public User findUserByID(Long id) {
+    public User getUserById(Long id) {
         return userDAO.findUserById (id);
     }
 
 
     }
+
 

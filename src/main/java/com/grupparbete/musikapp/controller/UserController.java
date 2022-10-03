@@ -5,9 +5,7 @@ import com.grupparbete.musikapp.model.User;
 import com.grupparbete.musikapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -21,6 +19,12 @@ public class UserController {
 
     public UserController(UserService userService) {
         this.userService = userService;
+    }
+
+    @GetMapping("/users/{id}")
+    public User getUserById(@PathVariable("id") Long id) {
+        return userService.getUserById(id);
+
     }
 
 

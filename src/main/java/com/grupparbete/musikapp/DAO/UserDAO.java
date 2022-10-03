@@ -7,6 +7,10 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class UserDAO {
 
+    public UserDAO(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
     UserRepository userRepository;
 
     public User findUserById(Long id){
