@@ -13,6 +13,10 @@ public class UserDAO {
         this.userRepository = userRepository;
     }
 
+    public User saveUser(User user) {
+        return userRepository.save (user);
+    }
+
     public User findUserById(Long id){
         return userRepository.findUserById(id);
 

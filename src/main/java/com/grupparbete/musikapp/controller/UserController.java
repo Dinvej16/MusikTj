@@ -21,11 +21,21 @@ public class UserController {
         this.userService = userService;
     }
 
+    //Get users by ID
     @GetMapping("/users/{id}")
     public User getUserById(@PathVariable("id") Long id) {
         return userService.getUserById(id);
 
     }
+
+    //Save user
+
+    @PostMapping(value="/user")
+    public User saveUser(@RequestBody User user) {
+        return userService.saveTheUser(user);
+    }
+
+
 
 
 }
