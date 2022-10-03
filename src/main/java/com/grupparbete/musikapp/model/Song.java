@@ -12,7 +12,6 @@ public class Song {
       Long id;
       String name;
       String artist;
-      String streams; // Sångens speltid
 
       public Song(String name, String artist) {
             this.id = id;
@@ -36,9 +35,5 @@ public class Song {
 
       public String getArtist() {
             return artist;
-      }
-
-      public String getStreams() {
-            return streams;
       }
 }
