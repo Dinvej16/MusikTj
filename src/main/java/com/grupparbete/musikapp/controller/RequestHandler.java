@@ -16,12 +16,6 @@ public class RequestHandler {
         return ExternalApiCall.searchSong(name);
     }
 
-    @GetMapping("/TrackInfo")
-    public JSONObject externalControllerHandler2(){
-        return ExternalApiCall.getTrackInfo();
-
-
-    }
 
 
 }
