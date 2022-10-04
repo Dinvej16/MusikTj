@@ -14,12 +14,12 @@ public class PlaylistController {
         this.playlistService = playlistService;
     }
 
-    @PostMapping("/playlist")
+    @PostMapping("/")
     public void addPlaylist(@RequestBody Playlist playlist){
         playlistService.addPlaylist(playlist);
     }
 
-    @DeleteMapping("/playlist/{id}")
+    @DeleteMapping("/{id}")
     public void deletePlaylistById(@PathVariable("id") Integer id) {
         playlistService.deletePlaylistById(id);
     }
