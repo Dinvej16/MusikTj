@@ -17,4 +17,9 @@ public class PlaylistDAO {
         repository.save(playlist);
 
     }
+
+    public void deleteById(Integer id) {
+        repository.deleteById(id);
+
+    }
 }

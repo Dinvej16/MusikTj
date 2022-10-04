@@ -16,4 +16,8 @@ public class PlaylistService {
     public void addPlaylist(Playlist playlist) {
         playlistDAO.savePlaylist(playlist);
     }
+
+    public void deletePlaylistById(Integer id) {
+        playlistDAO.deleteById(id);
+    }
 }
