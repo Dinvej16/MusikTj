@@ -4,6 +4,9 @@ import com.grupparbete.musikapp.model.Playlist;
 import com.grupparbete.musikapp.service.PlaylistService;
 import org.springframework.web.bind.annotation.*;
 
+import javax.websocket.server.PathParam;
+import java.util.List;
+
 @RestController
 @RequestMapping("/playlists")
 public class PlaylistController {
@@ -23,4 +26,12 @@ public class PlaylistController {
     public void deletePlaylistById(@PathVariable("id") Integer id) {
         playlistService.deletePlaylistById(id);
     }
+
+//    @GetMapping("/allPlaylists")
+//    public List<Playlist> getAllPlaylists () {
+//        return playlistService.getAllPlaylists();
+//    }
+
+
+
 }
