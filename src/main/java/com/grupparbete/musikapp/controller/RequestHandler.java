@@ -19,6 +19,10 @@ public class RequestHandler {
         return ExternalApiCall.searchSong(name);
     }
 
+    @GetMapping("/Search/{name}/{id}")
+    public Song select(@PathVariable String name, @PathVariable String id){
+        return ExternalApiCall.selectSong(name, id);
+    }
 
 
 }

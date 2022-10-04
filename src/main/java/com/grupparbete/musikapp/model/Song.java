@@ -9,9 +9,15 @@ import javax.persistence.Id;
 public class Song {
       @Id
       @GeneratedValue(strategy = GenerationType.IDENTITY)
-      Long id;
+      String id;
       String name;
       String artist;
+
+      public Song(String id, String name, String artist) {
+            this.id = id;
+            this.name = name;
+            this.artist = artist;
+      }
 
       public Song(String name, String artist) {
             this.id = id;
@@ -25,7 +31,7 @@ public class Song {
       }
 
 
-      public Long getId() {
+      public String getId() {
             return id;
       }
 
