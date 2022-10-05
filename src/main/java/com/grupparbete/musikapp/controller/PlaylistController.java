@@ -14,7 +14,7 @@ public class PlaylistController {
         this.playlistService = playlistService;
     }
 
-    @PostMapping("/")
+    @PostMapping("/add") 
     public void addPlaylist(@RequestBody Playlist playlist){
         playlistService.addPlaylist(playlist);
     }
