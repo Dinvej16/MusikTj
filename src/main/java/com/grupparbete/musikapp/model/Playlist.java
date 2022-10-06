@@ -12,10 +12,12 @@ public class Playlist {
     private Integer id;
     private String name;
 
+    @ManyToMany
+    private List<Song> songs;
+
     public Playlist() {
 
     }
-
     public Integer getId() {
         return id;
     }
@@ -31,6 +33,11 @@ public class Playlist {
     public void setName(String name) {
         this.name = name;
     }
+    public List<Song> getSongs() {
+        return songs;
+    }
 
-
+    public void addSongToPlaylist(Song song){
+        songs.add(song);
+    }
 }

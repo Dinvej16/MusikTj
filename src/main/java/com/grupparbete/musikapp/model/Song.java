@@ -1,17 +1,20 @@
 package com.grupparbete.musikapp.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Song {
       @Id
       @GeneratedValue(strategy = GenerationType.IDENTITY)
       Long id;
-      String name;
-      String artist;
+      private String name;
+      private String artist;
+
+      @ManyToMany(mappedBy = "songs")
+      private List<Playlist> playlists;
+
+
 
       public Song(String name, String artist) {
             this.id = id;
@@ -19,12 +22,9 @@ public class Song {
             this.artist = artist;
 
       }
-
       public Song() {
 
       }
-
-
       public Long getId() {
             return id;
       }
@@ -35,5 +35,9 @@ public class Song {
 
       public String getArtist() {
             return artist;
+      }
+
+      public void addPlaylistToSong(Playlist playlist){
+            playlists.add(playlist);
       }
 }
