@@ -11,7 +11,6 @@ public class Playlist {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
-    //private List<Song> songs;
 
     public Playlist() {
 
@@ -33,7 +32,5 @@ public class Playlist {
         this.name = name;
     }
 
-    //public List<Song> getSongs() {
-        //return songs;
-   // }
+
 }
