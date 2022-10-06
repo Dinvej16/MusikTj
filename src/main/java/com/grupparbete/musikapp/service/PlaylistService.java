@@ -23,7 +23,9 @@ public class PlaylistService {
         playlistDAO.deleteById(id);
     }
 
-    public List<Playlist> getAllPlaylists(String name) {
-        return null;
+
+    public List<Playlist> getAllPlaylists() {
+        return (List<Playlist>) playlistDAO.getAllPlaylists();
     }
+
 }

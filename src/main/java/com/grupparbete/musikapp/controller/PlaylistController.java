@@ -1,6 +1,7 @@
 package com.grupparbete.musikapp.controller;
 
 import com.grupparbete.musikapp.model.Playlist;
+import com.grupparbete.musikapp.model.Song;
 import com.grupparbete.musikapp.service.PlaylistService;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,10 +28,10 @@ public class PlaylistController {
         playlistService.deletePlaylistById(id);
     }
 
-//    @GetMapping("/allPlaylists")
-//    public List<Playlist> getAllPlaylists () {
-//        return playlistService.getAllPlaylists();
-//    }
+    @GetMapping("/getall")
+    public List<Playlist> getAllPlaylists(){
+        return playlistService.getAllPlaylists();
+    }
 
 
 
