@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin 
+@CrossOrigin
 public class RequestHandler {
 
     @GetMapping("/Search/{name}")
