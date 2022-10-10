@@ -11,11 +11,7 @@ public class SongController {
     @Autowired
     SongService songService;
 
-    @GetMapping("/{name}")
-    public Song getSong(@PathVariable("name") String name) {
-        return songService.getSong(name);
-    }
-    @PostMapping("/add")
+
     public void CreateSong(@RequestBody Song song){
         songService.createSong(song);
     }

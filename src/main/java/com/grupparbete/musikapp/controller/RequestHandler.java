@@ -10,19 +10,21 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+
+
 @RestController
 @RequestMapping("/api")
 public class RequestHandler {
-
+    // Söka efter låt
     @GetMapping("/Search/{name}")
     public List<Song> externalControllerHandler(@PathVariable String name){
         return ExternalApiCall.searchSong(name);
     }
 
+
     @GetMapping("/Search/{name}/{id}")
     public Song select(@PathVariable String name, @PathVariable String id){
-        return ExternalApiCall.selectSong(name, id);
+        return ExternalApiCall.selectSong(id);
     }
-
 
 }

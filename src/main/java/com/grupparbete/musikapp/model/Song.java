@@ -1,11 +1,9 @@
 package com.grupparbete.musikapp.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table
 public class Song {
       @Id
       @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,17 +12,20 @@ public class Song {
       String artist;
 
       public Song(String id, String name, String artist) {
+
             this.id = id;
             this.name = name;
             this.artist = artist;
       }
 
       public Song(String name, String artist) {
+
             this.id = id;
             this.name = name;
             this.artist = artist;
-
       }
+
+
 
       public Song() {
 
