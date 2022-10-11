@@ -9,6 +9,7 @@ import javax.websocket.server.PathParam;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/playlists")
 public class PlaylistController {
 
@@ -18,12 +19,12 @@ public class PlaylistController {
         this.playlistService = playlistService;
     }
 
-    @PostMapping("/playlist")
+    @PostMapping("/add")
     public void addPlaylist(@RequestBody Playlist playlist){
         playlistService.addPlaylist(playlist);
     }
 
-    @DeleteMapping("/playlist/{id}")
+    @DeleteMapping("/delete/{id}")
     public void deletePlaylistById(@PathVariable("id") Integer id) {
         playlistService.deletePlaylistById(id);
     }
