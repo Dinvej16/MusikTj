@@ -11,7 +11,7 @@ public class SongController {
     @Autowired
     SongService songService;
 
-
+    @PostMapping("/create")
     public void CreateSong(@RequestBody Song song){
         songService.createSong(song);
     }

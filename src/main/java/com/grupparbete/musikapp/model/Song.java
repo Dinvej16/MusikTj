@@ -1,38 +1,31 @@
 package com.grupparbete.musikapp.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
-@Table
+@Table(name = "songs")
 public class Song {
       @Id
       @GeneratedValue(strategy = GenerationType.IDENTITY)
-      String id;
+      Long id;
       String name;
       String artist;
-
-      public Song(String id, String name, String artist) {
-
-            this.id = id;
-            this.name = name;
-            this.artist = artist;
-      }
+      @ManyToMany(mappedBy = "songs")
+      private List<Playlist> playlists;
 
       public Song(String name, String artist) {
 
-            this.id = id;
             this.name = name;
             this.artist = artist;
       }
-
-
 
       public Song() {
 
       }
 
 
-      public String getId() {
+      public Long getId() {
             return id;
       }
 
