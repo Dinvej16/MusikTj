@@ -4,6 +4,8 @@ import com.grupparbete.musikapp.model.Playlist;
 import com.grupparbete.musikapp.repository.PlaylistRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public class PlaylistDAO {
 
@@ -21,5 +23,9 @@ public class PlaylistDAO {
     public void deleteById(Integer id) {
         repository.deleteById(id);
 
+    }
+
+    public Iterable<Playlist> getAllPlaylists() {
+        return repository.findAll();
     }
 }
