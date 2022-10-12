@@ -14,9 +14,9 @@ import java.util.List;
 @RequestMapping("/api")
 public class RequestHandler {
 
-    @GetMapping("/Search/{name}")
-    public List<Song> externalControllerHandler(@PathVariable String name){
-        return ExternalApiCall.searchSong(name);
+    @GetMapping({"/Search/{type}", "/Search/"})
+    public List<Song> externalControllerHandler(@PathVariable(name = "type", required = false) String type){
+        return ExternalApiCall.searchSong(type);
     }
 
 
