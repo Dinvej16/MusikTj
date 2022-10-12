@@ -1,6 +1,7 @@
 package com.grupparbete.musikapp.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "playlists")
@@ -10,6 +11,10 @@ public class Playlist {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
+
+    public Playlist() {
+
+    }
 
     public Integer getId() {
         return id;
@@ -27,9 +32,5 @@ public class Playlist {
         this.name = name;
     }
 
-    public Playlist() {
-
-
-    }
 
 }
