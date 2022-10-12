@@ -11,6 +11,11 @@ public class SongController {
     @Autowired
     SongService songService;
 
+    @GetMapping("/{id}")
+    public Song getById(@PathVariable("id") Long id){
+        return songService.GetSongById(id);
+    }
+
     @PostMapping("/create")
     public void CreateSong(@RequestBody Song song){
         songService.createSong(song);

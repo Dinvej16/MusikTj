@@ -13,7 +13,8 @@ import java.util.List;
 public class ExternalApiCall {
     @Autowired
     SongService songService;
-
+    @Autowired
+    PlaylistService playlistService;
 
 
     ArrayList<Song> searchResult = new ArrayList<>();

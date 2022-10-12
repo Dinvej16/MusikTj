@@ -34,14 +34,20 @@ public class PlaylistService {
         return (List<Playlist>) playlistDAO.getAllPlaylists();
     }
 
-//    public Song addSongToPlaylist(Integer playlistId, String songId) {
-//        Optional <Playlist> playlistOptional = playlistDAO.getById(playlistId);
-//        if (playlistOptional.isPresent()){
-//            Playlist playlist = playlistOptional.get();
-//            Song song =
-//
-//        }
-//    }
+public List<Song> addSongToPlaylist(Long songId, Integer playlistId) {
+  Optional <Playlist> playlistOptional = playlistDAO.getById(playlistId);
+  Optional<Song> maybeSong = Optional.ofNullable(songService.GetSongById(songId));
+     if (playlistOptional.isPresent() && maybeSong.isPresent()) {
+         Playlist playlist = playlistOptional.get();
+         Song song = maybeSong.get();
+         playlist.addSongToPlaylist(song);
+         playlist.setSongs(playlist.getSongs());
+
+         playlistDAO.savePlaylist(playlist);
+
+     }
+     return null;
+}
 
     public Playlist getById(Integer id) {
         Optional<Playlist> maybePlaylist = playlistDAO.getById(id);

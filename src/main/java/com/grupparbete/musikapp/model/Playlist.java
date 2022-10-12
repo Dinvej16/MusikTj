@@ -37,6 +37,10 @@ public class Playlist {
         return songs;
     }
 
+    public void setSongs(List<Song> songs) {
+        this.songs = songs;
+    }
+
     public void addSongToPlaylist(Song song){
         songs.add(song);
     }

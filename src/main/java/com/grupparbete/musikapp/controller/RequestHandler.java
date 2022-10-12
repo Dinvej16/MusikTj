@@ -1,13 +1,11 @@
 package com.grupparbete.musikapp.controller;
 
+import com.grupparbete.musikapp.model.Playlist;
 import com.grupparbete.musikapp.model.Song;
 import com.grupparbete.musikapp.service.ExternalApiCall;
 import net.minidev.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -37,5 +35,6 @@ public class RequestHandler {
     public Song select(@PathVariable String name, @PathVariable Long id){
         return externalApiCall.selectSong(id);
     }
+
 
 }

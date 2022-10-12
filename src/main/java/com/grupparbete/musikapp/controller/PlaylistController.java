@@ -34,10 +34,10 @@ public class PlaylistController {
     }
 
 
-//    @PostMapping("add/{playlistId}/{songId}")
-//    public Song addSongToPlaylist(@PathVariable("playlistId") Integer playlistId, @PathVariable("song") String songId) {
-//        return playlistService.addSongToPlaylist(playlistId, songId);
-//    }
+    @PutMapping("add/{songId}/{playListId}")
+    public List<Song> addSongToPlaylist(@PathVariable("songId") Long songId, @PathVariable("playListId") Integer playListId){
+        return playlistService.addSongToPlaylist(songId, playListId);
+    }
 
     @GetMapping("{id}")
         public Playlist getById(@PathVariable("id") Integer id) {
