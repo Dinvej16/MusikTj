@@ -5,8 +5,8 @@ import net.minidev.json.JSONObject;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api")
 @CrossOrigin
+@RequestMapping("/api")
 public class RequestHandler {
 
     @GetMapping("/Search/{name}")
