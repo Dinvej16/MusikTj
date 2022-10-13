@@ -41,6 +41,14 @@ public class Playlist {
         this.songs = songs;
     }
 
+    public void DeleteSong(Song song) {
+        for(Song i : songs){
+            if (i.equals(song)){
+                songs.remove(i);
+            }
+        }
+    }
+
     public void addSongToPlaylist(Song song){
         songs.add(song);
     }

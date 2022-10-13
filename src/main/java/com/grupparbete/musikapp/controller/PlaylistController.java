@@ -23,7 +23,7 @@ public class PlaylistController {
         playlistService.addPlaylist(playlist);
     }
 
-    @DeleteMapping("/playlist/{id}")
+    @DeleteMapping("/delete/{id}")
     public void deletePlaylistById(@PathVariable("id") Integer id) {
         playlistService.deletePlaylistById(id);
     }
@@ -42,6 +42,11 @@ public class PlaylistController {
     @GetMapping("{id}")
     public Playlist getById(@PathVariable("id") Integer id) {
         return playlistService.getById(id);
+    }
+
+    @DeleteMapping("delete/{playlistId}/{songId}")
+    public void deleteSongFromPlaylistById(@PathVariable("playlistId") Integer playlistId, @PathVariable("songId") Long songId){
+         playlistService.deleteSongFromPlaylistById(playlistId, songId);
     }
 
 }

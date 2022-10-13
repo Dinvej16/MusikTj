@@ -58,4 +58,20 @@ public class PlaylistService {
         }
         return null;
     }
-}
+
+    public void deleteSongFromPlaylistById(Integer playlistId, Long songId) {
+        Optional <Playlist> maybePlaylist = playlistDAO.getById(playlistId);
+        Optional <Song> maybeSong = Optional.ofNullable(songService.GetSongById(songId));
+
+        if (maybeSong.isPresent() && maybePlaylist.isPresent()){
+            Song song = maybeSong.get();
+            Playlist playlist = maybePlaylist.get();
+
+            playlist.DeleteSong(song);
+            playlist.setSongs(playlist.getSongs());
+            playlistDAO.savePlaylist(playlist);
+            }
+        }
+
+
+    }
