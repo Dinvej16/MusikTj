@@ -18,12 +18,12 @@ public class PlaylistController {
         this.playlistService = playlistService;
     }
 
-    @PostMapping("/add")
+    @PostMapping("/playlist")
     public void addPlaylist(@RequestBody Playlist playlist){
         playlistService.addPlaylist(playlist);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/playlist/{id}")
     public void deletePlaylistById(@PathVariable("id") Integer id) {
         playlistService.deletePlaylistById(id);
     }
@@ -34,5 +34,14 @@ public class PlaylistController {
     }
 
 
+    @PutMapping("add/{songId}/{playListId}")
+    public List<Song> addSongToPlaylist(@PathVariable("songId") Long songId, @PathVariable("playListId") Integer playListId){
+        return playlistService.addSongToPlaylist(songId, playListId);
+    }
+
+    @GetMapping("{id}")
+    public Playlist getById(@PathVariable("id") Integer id) {
+        return playlistService.getById(id);
+    }
 
 }
