@@ -1,20 +1,55 @@
+
 package com.grupparbete.musikapp.service;
 
-import net.minidev.json.JSONObject;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.grupparbete.musikapp.model.Song;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
+import java.util.List;
+
+@Service
 public class ExternalApiCall {
+    @Autowired
+    SongService songService;
+    @Autowired
+    PlaylistService playlistService;
 
-    //Detta är "sök" urlen som finns i LastFm API. Det som händer här är att den kan hitta låt utifrån både artist och låtens namn.
-    private static final String apiUrl = "https://ws.audioscrobbler.com/2.0/?method=track.search&track=asme&api_key=cb2bdec273e087b5aef93970d41e9676&format=json";
 
-    public static JSONObject searchSong(){
+    ArrayList<Song> searchResult = new ArrayList<>();
+
+
+    public List<Song> searchSong(String name) {
+        String apiUrlSearch = "https://ws.audioscrobbler.com/2.0/?method=track.search&track=" + name + "&api_key=cb2bdec273e087b5aef93970d41e9676&format=json";
         RestTemplate restTemplate = new RestTemplate();
-        restTemplate.getForObject(apiUrl, JSONObject.class);
+        JsonNode node = restTemplate.getForObject(apiUrlSearch, JsonNode.class);
         try {
-            return restTemplate.getForObject(apiUrl, JSONObject.class);
-        } catch (Exception abc){
-            return null;
+            for (JsonNode i : node.get("results").get("trackmatches").get("track")) {
+
+                String trackName = i.get("name").asText();
+                String artist = i.get("artist").asText();
+                Song song = new Song(trackName, artist);
+                songService.createSong(song);
+                searchResult.add(song);
+
+
+            }
+            return searchResult;
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+        return null;
+    }
+
+    public Song selectSong(Long id) {
+        for (Song i : searchResult) {
+            if (i.getId().equals(id)) {
+                return i;
+            }
+        }
+
+        return null;
     }
 }
